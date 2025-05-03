@@ -25,7 +25,9 @@ public ArrayList<String> getComments()
     if (temp.length()>0){
     for (int j=0;j<temp.length();j++){
         if ((temp.substring(j,j+1).equals("!"))) {
-            ret.add(i+"-"+temp);
+            String exclaim="";
+            if (!(temp.substring(temp.length()-1,temp.length())).equals("!")&&!(temp.substring(temp.length()-1,temp.length()).equals("."))) exclaim=".";
+            ret.add(i+"-"+temp+exclaim);
         }
     }
     
